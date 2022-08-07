@@ -7,7 +7,7 @@ import org.springframework.util.Assert;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
-public class MemberJoinRequest {
+public class  MemberJoinRequest {
     private String email;
     private String profileImage;
     private String nickname;
