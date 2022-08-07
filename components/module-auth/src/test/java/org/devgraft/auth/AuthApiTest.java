@@ -32,7 +32,7 @@ class AuthApiTest {
         spyAuthService.exportAuthorization_returnValue = Optional.of(AuthResult.of("access", "refresh"));
         spyAuthService.refresh_returnValue = AuthResult.of("accessR", "refreshR");
 
-        MockHttpServletResponse response = mockMvc.perform(get("/auth/api/refresh"))
+        MockHttpServletResponse response = mockMvc.perform(get("/api/v1/auth/refresh"))
                 .andExpect(status().isOk())
                 .andReturn()
                 .getResponse();
@@ -44,7 +44,7 @@ class AuthApiTest {
     @DisplayName("로그아웃 Api Test")
     @Test
     void logout_Api_Test() throws Exception {
-        mockMvc.perform(delete("/auth/api/logout"))
+        mockMvc.perform(delete("/api/v1/auth/logout"))
                 .andExpect(status().isOk());
 
         assertThat(spyAuthService.removeAuthorization_wasCall).isTrue();
