@@ -17,6 +17,8 @@ spring:
     console:
       enabled: true
 
+version: 0.0.1
+
 support:
   jwt:
     secret: ${JWT_SECRET}
