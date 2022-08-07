@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletResponse;
 
 @RequiredArgsConstructor
-@RequestMapping("auth/api")
+@RequestMapping("api/v1/auth")
 @RestController
 public class AuthApi {
     private final AuthService authService;

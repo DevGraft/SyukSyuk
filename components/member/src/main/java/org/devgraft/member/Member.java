@@ -31,7 +31,7 @@ public class Member extends BaseEntity {
     private String stateMessage;
 
     @Builder(access = AccessLevel.PROTECTED)
-    private Member(Long id, String email, String profileImage, String nickname, String identifyToken, String stateMessage) {
+    private Member(final Long id, final String email, final String profileImage, final String nickname, final String identifyToken, final String stateMessage) {
         this.id = id;
         this.email = email;
         this.profileImage = profileImage;
