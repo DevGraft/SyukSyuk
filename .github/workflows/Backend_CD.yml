@@ -26,6 +26,7 @@ jobs:
       with:
         files: ${{ env.RESOURCE_PATH }}
       env:
+        version: ${{ secrets.VERSION }}
         spring.datasource.url: ${{ secrets.DB_CONNECT_URL }}
         spring.datasource.username: ${{ secrets.DB_USERNAME }}
         spring.datasource.password: ${{ secrets.DB_PASSWORD }}
