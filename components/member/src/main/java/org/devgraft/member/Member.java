@@ -13,6 +13,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * 작성자: PCloud
+ * 작성일자: 2022-08-08
+ * 마지막 업데이트 일자: 2022-08-08
+ */
 @Getter
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Entity
