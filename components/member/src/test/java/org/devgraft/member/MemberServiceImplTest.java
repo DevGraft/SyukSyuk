@@ -54,7 +54,7 @@ class MemberServiceImplTest {
         memberService.join(givenMemberJoinRequest);
 
         assertThat(spyMemberRepository.save_member_argument).isNotNull();
-        assertThat(spyMemberRepository.save_member_argument.getEmail()).isEqualTo(givenMemberJoinRequest.getEmail());
+        assertThat(spyMemberRepository.save_member_argument.getId()).isEqualTo(givenMemberJoinRequest.getEmail());
         assertThat(spyMemberRepository.save_member_argument.getProfileImage()).isEqualTo(givenMemberJoinRequest.getProfileImage());
         assertThat(spyMemberRepository.save_member_argument.getNickname()).isEqualTo(givenMemberJoinRequest.getNickname());
         assertThat(spyMemberRepository.save_member_argument.getIdentifyToken()).isEqualTo(givenMemberJoinRequest.getIdentifyToken());
