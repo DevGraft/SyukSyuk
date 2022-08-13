@@ -26,7 +26,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public Long getMemberId(final String identifyToken) {
         return memberRepository.findByIdentifyToken(identifyToken)
-                .map(Member::getId)
+                .map(Member::getIdx)
                 .orElseThrow(RuntimeException::new);
     }
 
@@ -35,7 +35,7 @@ public class MemberServiceImpl implements MemberService {
     public MemberGetResponse getMember(final Long memberId) {
         Member member = memberRepository.findById(memberId)
                 .orElseThrow(RuntimeException::new);
-        return MemberGetResponse.of(member.getEmail(), member.getNickname(), member.getProfileImage(), member.getStateMessage());
+        return MemberGetResponse.of(member.getId(), member.getNickname(), member.getProfileImage(), member.getStateMessage());
     }
 
     @Override
