@@ -7,7 +7,7 @@ public interface IssuedAuthTokenUseCase<T extends IssuedAuthTokenUseCase.IssuedA
 
     }
 
-    public abstract static class IssuedAuthTokenResult {
+    public static class IssuedAuthTokenResult {
 
     }
 }
