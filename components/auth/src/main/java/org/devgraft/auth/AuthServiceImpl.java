@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import org.devgraft.auth.exception.AuthAccessTokenExpiredException;
 import org.devgraft.auth.exception.AuthRefreshTokenExpiredException;
 import org.devgraft.auth.exception.UnverifiedAuthRequestException;
-import org.devgraft.member.MemberService;
 import org.devgraft.support.jwt.JwtGenerateRequest;
 import org.devgraft.support.jwt.JwtService;
 import org.devgraft.support.provider.SHA256Provider;
