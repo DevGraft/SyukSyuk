@@ -2,7 +2,6 @@
 
 > 슉슉 슉슉슉!!!
 
-[Team Blog](https://pcloud.tistory.com) 슉슉
 
 주소: http://www.devgraft.com
 
