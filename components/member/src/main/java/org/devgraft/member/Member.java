@@ -24,28 +24,36 @@ import javax.persistence.Id;
 public class Member extends BaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idx;
-    @Id @Column(name = "id", unique = true)
+    @Column(name = "id", unique = true)
     private String id;
-    @Column(name = "profile_image")
-    private String profileImage;
+    @Column(name = "password")
+    private String password;
     @Column(name = "nickname")
     private String nickname;
+    @Column(name = "profile_image")
+    private String profileImage;
     @Column(name = "state_message")
     private String stateMessage;
+    @Column(name = "status")
+    private MemberStatus status;
 
     @Builder(access = AccessLevel.PROTECTED)
-    private Member(final Long idx, final String id, final String profileImage, final String nickname, final String stateMessage) {
+    private Member(final Long idx, final String id, final String password, final String nickname, final String profileImage, final String stateMessage, final MemberStatus status) {
         this.idx = idx;
         this.id = id;
-        this.profileImage = profileImage;
+        this.password = password;
         this.nickname = nickname;
+        this.profileImage = profileImage;
         this.stateMessage = stateMessage;
+        this.status = status;
     }
 
-    public static Member of(final String id, final String profileImage, final String nickname, final String stateMessage) {
+    public static Member of(final String id, final String password, final String nickname, final String profileImage, final String stateMessage, final MemberStatus status) {
         Assert.notNull(id, "id must not be null");
+        Assert.notNull(password, "password must not be null");
         Assert.notNull(nickname, "nickname must not be null");
-        return new Member(null, id, profileImage, nickname, stateMessage);
+        Assert.notNull(status, "status must not be null");
+        return new Member(null, id, password, nickname, profileImage, stateMessage, status);
     }
 
     public void updateProfile(final String nickname, final String stateMessage) {
