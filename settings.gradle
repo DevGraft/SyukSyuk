@@ -2,6 +2,7 @@ rootProject.name = 'syuck-syuck'
 
 include ':components:member'
 include ':components:auth'
+include ':components:auth-structure-core'
 include ':components:module-member'
 include ':components:module-auth'
 include ':components:support-jpa'
